@@ -30,6 +30,7 @@ body {
 
 }
 .information_box {
+    display: none;
     width: 500px;
     background: honeydew;
     border-radius: 5px;
