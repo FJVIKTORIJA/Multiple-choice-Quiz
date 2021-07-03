@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+body {
+    display: grid;
+    background: white;
+    place-items: center;
+    height: 100vh;
+    
+}
+.start {
+    height: auto;
+    width: auto;
+}
+#start1 {
+    height: 70px;
+    width: 250px;
+    text-align: center;
+    padding: 20px 0px;
+    background: white;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 30px 10px;
+    border: 2px solid navy;
+    cursor: pointer;
+    display: none;
+}
+
+#start1:hover {
+    background:grey;
+    color: oldlace;
+
+}
+
+#instructions, #questions {
+    height: auto;
+    width: 580px;
+    padding: 20px;
+    background: rgb(217, 191, 241);
+    border-radius: 30px 10px;
+    border: 2px solid ivory;
+   display: none;
+
+}
+#instructions h2 {
+    font-size: large;
+    color: black;
+}
+
+#instructions h3 {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: medium;
+}
+
+#instructions #btn {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+#instructions #btn button {
+    height: 50px;
+    width: 120px;
+    margin: 10px 25px;
+    border: rgb(201, 231, 142);
+    outline: none;
+    background: yellowgreen;
+    border-radius: 40px 40px;
+    font-size: larger;
+    cursor: progress;
+    
+}
+#instructions #btn button:last-child{
+    margin: 30px 10;
+}
+#instructions #btn button:hover{
+    background: yellow;
+
+}
+/* Questions*/
+
+#questions {
+    display: block;
+    height: 480px;
+    position: relative;
+}
+#questions #question_header {
+    height: 70px;
+width: 100%;
+position: absolute;
+top: 0;
+left: 0;
+display: flex;
+align-items: center;
+flex-direction: row;
+border-radius: 30px 0;
+    
+}
+
+#questions  h4 {
+    font-size: 30px;
+    margin: 0 20px;
+    color:black;
+}
+h4 {
+    font-size: 30px;
+    margin: 0 20px;
+    color:black;
+}
+#questions  #time {
+    height: 50px;
+    width: 200px;
+    background: transparent;
+    color: black;
+    border:1px solid whitesmoke;
+    font-size: 16px;
+    border-radius: 20px 50px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 10px;
+}
+
+#questions #time h5 {
+    font-size: medium;
+    display: grid;
+    place-items: center;
+    color: black;
+    margin: 0 10px;
+
+}
+#questions #time #remainingtime {
+    height: 44px;
+    width: 50px;
+    background: black;
+    color: whitesmoke;
+    border: 1px solid blue;
+    border-radius: 15px 7px;
+    margin: 2px 00 27px;
+
+}
+
+
+
+
+

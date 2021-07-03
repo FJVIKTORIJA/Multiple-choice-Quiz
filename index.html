@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,63 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Quiz</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-<div class="start_btn"><button>START</button></div>
+    <div id="start">
+        <!--Start-->
+        <div id="start1"><button>START</button></div>
 
-<div class="information_box">
-    <div class="information_title">
-        <span> Rules</span>
-</div>
-<div class="information_list">
-    <div class="info">1. There are given 15 seconds for each question</div>
-    <div class="info">2. You are not allowed to change the answer </div>
-    <div class="info">3. You cannot quit the Quiz once started</div>
-    <div class="info">4. You get points for correct answers</div>
-</div>
-<div class="buttons">
-    <button class="stop">Stop Quiz</button>
-    <button class="continue">Continue</button>
-</div>
-</div>
+        <!--Quizz instructions-->
 
-<div class="question_box">
-    <header>
-        <div class="title">Interesting Quiz</div>
-        <div class="timer"></div>
-        <div class="time_left">Remaining Time</div>
-        <div class="timer_s">15</div>
-    </div>
-    </header>
-    <section>
-        <div class="question">
-            <span>What JavaScript is used for?</span>
-        </div>
-        <div class="option1">
-            <div class="option">
-                <span> To create a dynamic and interactive experience for the user while using Web browsers</span>
-                <div class="icon tick"><i>&#10003;</i></div>
+        <div id="instructions">
+            <h2>Rules</h2>
+            <h3>1. There are given 15 seconds for each question</h3> 
+            <h3>2. You are not allowed to change the answer </h3>
+            <h3>3. You cannot quit the Quiz once started </h3>
+            <h3> 4. You get points for correct answers</h3>
+            <div id="btn">
+                <button id="Leave"> Leave</button>
+                <button id="Proceed">Proceed</button>
             </div>
-                <div class="option">
-                    <span> It is code that controls  only the visual appearance of your individual HTML elements</span>
-                    <div class="icon cross"><i>&#x2717;</i></div>
-                </div>
-                <div class="option">
-                     <span> Such thing does not exsist </span>
-                     <div class="icon cross"><i>&#x2717;</i></div>
-                </div>
         </div>
-    </section>
 
-    <footer>
-        <div class="allquestions">
-            <span><p>2</p>Of<p>3</p>Questions</span>
+         <!--Questions-->
+    <div id="questions">
+        <h4>JS Quiz</h4>
+        <div id="time">
+            <h5>Remaining time</h5>
+            <h5 id="Remainingtime">00</h5>
         </div>
-        <button class="Next_bt ">Next</button>
-    </footer>
+    </div>
+    <!--Questions-->
 
 
-
+        </div>
+        <script src="./assets/JS/script.js"></script>
 </body>
 </html>
+
+
+
+
+    
