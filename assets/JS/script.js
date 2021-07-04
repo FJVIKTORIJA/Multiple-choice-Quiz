@@ -131,7 +131,7 @@ NextQ.addEventListener("click" , ()=>{
     })
     loadData();
 
-    result.style.display ="block";
+   
     result.innerHTML = `${correct} of ${MCQS.length}`;
     clearInterval(interval);
     interval = setInterval(countDown, 1000);
