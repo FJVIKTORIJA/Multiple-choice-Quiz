@@ -30,12 +30,12 @@ let result = document.querySelector ("#result");
 
 
 
-let option = document.querySelector (".option");
+let option = document.querySelectorAll (".option");
 
 
 
 let index = 0;
-let time = 0;
+let timer = 0;
 let interval = 0;
 
 //total points
@@ -50,3 +50,73 @@ start.addEventListener("click" , ()=>{
     instructions.style.display = "block";
 
 })
+//when Exit button clecked 
+Leave.addEventListener("click" , ()=>{
+    start.style.display = "block";
+    instructions.style.display = "none";
+
+})
+
+//Timer
+let countDown = ()=>{
+    if(timer === 15)
+    {
+        clearInterval(interval);
+        NextQ.click();
+    }
+    else
+    {
+        timer++;
+        time.innerText = timer;
+
+    }
+}
+
+setInterval(countDown,1000);
+
+let loadData = ()=>{
+    Q1.innerText = index + 1 + "1.";
+    Q1T.innerText = MCQS[index].questions;
+    option1.innerText = MCQS[index].choice1;
+    option2.innerText = MCQS[index].choice2;
+    option3.innerText = MCQS[index].choice3;
+
+    timer = 0;
+}
+
+loadData();
+
+
+
+ProceedButton.addEventListener("click" , ()=>{
+  questions.style.display = "block";
+    instructions.style.display = "none";
+
+    interval = setInterval(countDown, 1000);
+    loadData();
+});
+
+
+option.forEach( (_options,_optionNo) =>{
+    choices.addEventListener("click",()=>{
+        choices.classList.add("active");
+
+        if(_optionNo === MCQS[index].answer)
+        {
+            correct++;
+        }
+        else
+        
+        {
+            correct += 0;
+        }
+        clearInterval(interval);
+        for (i =0; i <= 3; i++)
+        {
+            option.classList.add("disabled");
+        }
+        
+    })
+
+    
+});
