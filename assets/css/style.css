@@ -28,7 +28,7 @@ body {
     border-radius: 30px 10px;
     border: 2px solid navy;
     cursor: pointer;
-    display: none;
+    /*display: none;*/
 }
 
 #start1:hover {
@@ -88,7 +88,7 @@ body {
 /* Questions*/
 
 #questions {
-    display: block;
+    /*display: block;*/
     height: 480px;
     position: relative;
 }
@@ -148,7 +148,109 @@ h4 {
 
 }
 
+#questions #quiz {
+    position: absolute;
+    top:90px;
+    display: flex;
+    flex-direction: row;
+    
+}
+#questions #quiz h2 {
+    font-size: 30px;
 
+}
+#questions #quiz h2:first-child {
+    margin: 0 10px 0 5px;
 
+}
 
+#questions #answers {
+    height: 400px;
+    width: 100%;
+    position: absolute;
+    top: 160px;
 
+}
+#questions #answers h4{
+    height: 50px;
+    width: 500px;
+    background: white;
+    line-height: 40px;
+    margin: 5px 0;
+    border-radius: 5px;
+    padding: 0 25px;
+    font-size: medium;
+    color: black;
+    overflow: hidden;
+    border: 1px solid navy;
+    cursor: pointer;
+
+}
+#questions #answers h4:hover {
+    background: lightgrey;
+
+}
+#questions #answers .active {
+    background: lightgrey;
+
+}
+#questions #answers .disabled {
+    pointer-events: none;
+
+}
+#questions #NextQ {
+    height: 60px;
+    width: 120px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    
+
+}
+    
+#NextQ {
+    margin: 0px 30px;
+    display:none;
+}
+
+#NextQ:last-child {
+    height: 40px;
+    width: 100px;
+    display: grid;
+    place-items: center;
+    background: lightgrey;
+    position: absolute;
+    right: 0;
+    color: black;
+    border:1px solid navy;
+    font-size: medium;
+    border-radius: 20px 20px;
+    cursor: pointer;
+    margin: 0 20px;
+}
+#questions #next #NextQ:hover {
+    background: lightgrey;
+}
+#questions #next #NextQ:first-child:hover {
+    background: white;
+}
+ #start #result {
+    height: 500px;
+    width: 450px;
+    padding: 20px;
+    background: lightgrey;
+    border-radius: 30px 20px;
+    border: 1px solid navy; ;
+    overflow: hidden;
+    position:relative;
+    display:none;
+
+}
+ 
+h6 {
+    color: navy;
+    font-size: x-large;
+    display: grid;
+    align-items: center;
+    display: none;
+}
