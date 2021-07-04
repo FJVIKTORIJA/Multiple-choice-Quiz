@@ -72,14 +72,14 @@ let countDown = ()=>{
     }
 }
 
-setInterval(countDown,1000);
+//setInterval(countDown,1000);
 
 let loadData = ()=>{
-    Q1.innerText = index + 1 + "1.";
-    Q1T.innerText = MCQS[index].questions;
-    option1.innerText = MCQS[index].choice1;
-    option2.innerText = MCQS[index].choice2;
-    option3.innerText = MCQS[index].choice3;
+    Q1.innerText = index + 1 + ".";
+    Q1T.innerText = MCQS[index].Q1T;
+    choice1.innerText = MCQS[index].choice1;
+    choice2.innerText = MCQS[index].choice2;
+    choice3.innerText = MCQS[index].choice3;
 
     timer = 0;
 }
@@ -94,12 +94,17 @@ ProceedButton.addEventListener("click" , ()=>{
 
     interval = setInterval(countDown, 1000);
     loadData();
+
+    option.forEach(removeActive =>{
+        removeActive.classList.remove("active");
+
+    })
 });
 
 
 option.forEach( (_options,_optionNo) =>{
-    choices.addEventListener("click",()=>{
-        choices.classList.add("active");
+    _options.addEventListener("click",()=>{
+        _options.classList.add("active");
 
         if(_optionNo === MCQS[index].answer)
         {
@@ -113,10 +118,31 @@ option.forEach( (_options,_optionNo) =>{
         clearInterval(interval);
         for (i =0; i <= 3; i++)
         {
-            option.classList.add("disabled");
-        }
-        
+            _options.classList.add("disabled");
+        }       
     })
-
-    
 });
+
+NextQ.addEventListener("click" , ()=>{
+    if (index !== MCQS.length - 1 ){
+        index ++;
+        option.forEach(removeActive =>{
+            removeActive.classList.remove("active");
+    })
+    loadData();
+    }
+    else
+    {
+        index=0
+        clearInterval(interval);
+        questions.style.display = "none";
+        ProcessingInstruction.innerHTML = 'Your result ${correct} of ${MCQS.lenght}';
+        result.style.display= "block";
+
+    }
+
+    for (i =0; i <= 3; i++)
+        {
+            questions.classList.add("disabled");
+        }  
+})
