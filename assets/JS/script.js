@@ -130,19 +130,26 @@ NextQ.addEventListener("click" , ()=>{
             removeActive.classList.remove("active");
     })
     loadData();
+
+    result.style.display ="block";
+    result.innerHTML = `${correct} of ${MCQS.length}`;
+    clearInterval(interval);
+    interval = setInterval(countDown, 1000);
+
     }
     else
     {
-        index=0
+        index=0;
         clearInterval(interval);
         questions.style.display = "none";
-        ProcessingInstruction.innerHTML = 'Your result ${correct} of ${MCQS.lenght}';
+        result.innerHTML = `Your result ${correct} of ${MCQS.lenght}`;
         result.style.display= "block";
+        
 
     }
 
     for (i =0; i <= 3; i++)
         {
-            questions.classList.add("disabled");
+            questions.classList.remove("disabled");
         }  
 })

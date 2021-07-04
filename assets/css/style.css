@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 body {
     display: grid;
-    background: white;
+    background: rgb(54, 54, 54);
     place-items: center;
     height: 100vh;
     
@@ -21,12 +21,12 @@ body {
     width: 250px;
     text-align: center;
     padding: 20px 0px;
-    background: white;
-    color: black;
+    background: gray;
+    color: whitesmoke;
     font-size: 25px;
     font-weight: bold;
-    border-radius: 30px 10px;
-    border: 2px solid navy;
+    border-radius: 30px 30px;
+    border: 5px solid white;
     cursor: pointer;
     /*display: none;*/
 }
@@ -39,22 +39,23 @@ body {
 
 #instructions, #questions {
     height: auto;
-    width: 580px;
-    padding: 20px;
-    background: rgb(217, 191, 241);
-    border-radius: 30px 10px;
-    border: 2px solid ivory;
+    width: 700px;
+    padding: 30px;
+    background: rgba(167, 168, 170, 0.822);
+    border-radius: 30px 30px;
+    border: 5px solid ivory;
    display: none;
 
 }
 #instructions h2 {
-    font-size: large;
-    color: black;
+    font-size: 40px;
+    color: white;
 }
 
 #instructions h3 {
     height: 50px;
     width: 100%;
+    color: rgb(255, 250, 250);
     display: flex;
     align-items: center;
     font-size: medium;
@@ -72,7 +73,7 @@ body {
     margin: 10px 25px;
     border: rgb(201, 231, 142);
     outline: none;
-    background: yellowgreen;
+    background: white;
     border-radius: 40px 40px;
     font-size: larger;
     cursor: progress;
@@ -82,10 +83,10 @@ body {
     margin: 30px 10;
 }
 #instructions #btn button:hover{
-    background: yellow;
+    background: rgb(241, 239, 220);
 
 }
-/* Questions*/
+
 
 #questions {
     /*display: block;*/
@@ -120,7 +121,6 @@ h4 {
     width: 200px;
     background: transparent;
     color: black;
-    border:1px solid whitesmoke;
     font-size: 16px;
     border-radius: 20px 50px;
     display: flex;
@@ -142,7 +142,6 @@ h4 {
     width: 50px;
     background: black;
     color: whitesmoke;
-    border: 1px solid blue;
     border-radius: 15px 7px;
     margin: 2px 00 27px;
 
@@ -182,7 +181,7 @@ h4 {
     font-size: medium;
     color: black;
     overflow: hidden;
-    border: 1px solid navy;
+    border: 2px solid rgb(10, 10, 10);
     cursor: pointer;
 
 }
@@ -209,8 +208,8 @@ h4 {
 }
     
 #NextQ {
-    margin: 0px 30px;
-    display:none;
+    margin: 10px 30px;
+   display:none; 
 }
 
 #NextQ:last-child {
@@ -222,11 +221,11 @@ h4 {
     position: absolute;
     right: 0;
     color: black;
-    border:1px solid navy;
+    border:5px solid whitesmoke;
     font-size: medium;
     border-radius: 20px 20px;
     cursor: pointer;
-    margin: 0 20px;
+    margin: 20 20px;
 }
 #questions #next #NextQ:hover {
     background: lightgrey;
@@ -238,17 +237,22 @@ h4 {
     height: 500px;
     width: 450px;
     padding: 20px;
-    background: lightgrey;
-    border-radius: 30px 20px;
-    border: 1px solid navy; ;
+    background: rgb(218, 241, 172);
+    border-radius: 30px 40px;
+    border: 5px solid rgb(240, 240, 243); ;
     overflow: hidden;
     position:relative;
-    display:none;
+    /*display:none;*/
 
 }
  
-h6 {
-    color: navy;
+ h6 {
+    height: 500px;
+    width: 450px;
+    padding: 20px;
+    background: rgb(218, 241, 172);
+    border-radius: 30px 30px;
+    color: rgb(35, 35, 82);
     font-size: x-large;
     display: grid;
     align-items: center;
